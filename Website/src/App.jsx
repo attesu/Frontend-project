@@ -1,6 +1,8 @@
 import Header from "./Header"
 import Mainbody from "./Mainbody"
 import Footer from "./Footer"
+import SuperPeople from "./SuperPeople";
+
 
 function App() {
 
@@ -9,6 +11,7 @@ function App() {
   <Header />
   <Mainbody />
   <Footer />
+  <SuperPeople />
  </div>
   );
 }

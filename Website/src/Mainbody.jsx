@@ -1,9 +1,9 @@
 function Mainbody(){
     return(
     <div>
-    <span>Tähän tulee tekstiä</span>
+    <span>Vaihda sankaria</span>
     <br />
-    <button>Count</button>
+    <button>Paina tästä</button>
     </div>
     )
 }
