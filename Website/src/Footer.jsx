@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <p>Tähän tulee jotain jännää</p>
+        <p>Tämä projekti on vasta alussa</p>
     )
 }
 
