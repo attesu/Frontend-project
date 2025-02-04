@@ -1,19 +1,21 @@
 import React from "react";
 import SuperPerson from "./SuperPerson";
+import HeroForm from "./HeroForm";
+import useDataStore from "./stores/useDataStore";
+
 
 function SuperPeople() {
-    const heroes = [
-        { name: "Hulk", superpower: "vahva" },
-        { name: "Storm", superpower: "Sään hallinta" },
-        { name: "Ant-Man", superpower: "Koko vaihtelu" },
-    ];
+    const { heroes, addHero } = useDataStore(); // Haetaan Zustandin tila
 
     return (
-        <ul>
-            {heroes.map((hero, index) => (
-                <SuperPerson key={index} name={hero.name} superpower={hero.superpower} />
-            ))}
-        </ul>
+        <div>
+            <ul>
+                {heroes.map((hero, index) => (
+                    <SuperPerson key={index} name={hero.name} superpower={hero.superpower} />
+                ))}
+            </ul>
+            <HeroForm addHero={addHero} />
+        </div>
     );
 }
 

@@ -1,0 +1,37 @@
+function SuperPeople() {
+    //let name = "";
+    //let superpower = "superpower!"
+    const [name, handleNewName] = useState("")
+    const [superpower, handleNewSuperpower] = useState("");
+    const [heroes, handleNewHeroes] = useState([
+        { name: "Hulk", superpower: "vahva" },
+        { name: "Storm", superpower: "Sään hallinta" },
+        { name: "Ant-Man", superpower: "Koko vaihtelu" },
+    ]);
+
+    const handleAddHero = () => {
+        if (name.trim() && superpower.trim()) {
+            handleNewHeroes([...heroes, { name, superpower }]); // Lisää uusi sankari listaan
+            handleNewName(""); // Tyhjennä nimi
+            handleNewSuperpower(""); // Tyhjennä supervoima
+  }}
+    return (
+        <div>
+            <button onClick={handleAddHero}>save</button>
+
+            <br />
+            <input 
+            onChange={(e) => handleNewName(e.target.value)}
+            value= {name}
+            type="text"
+            name="name"     
+            />
+
+            <br />
+
+            <input 
+            onChange={(e) => handleNewSuperpower(e.target.value)}
+            value={superpower}
+            type="text"
+            superpower="superpowwer"
+            />

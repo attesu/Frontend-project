@@ -3,7 +3,7 @@ function Mainbody(){
     <div>
     <span>Vaihda sankaria</span>
     <br />
-    <button>Paina tästä</button>
+    <textarea name="textarea"></textarea>
     </div>
     )
 }
